@@ -165,7 +165,7 @@ $conn->close();
     <!-- Logo on top -->
     <img src="ChatGPT Image Sep 20, 2025, 02_28_43 AM.png" alt="Logo">
 
-    <h1>Login</h1>
+    <h1>Welcome Customer!</h1>
     <form method="POST" action="">
         <label>Username or Email</label>
         <input type="text" name="login_id" placeholder="Enter Username or Email" required>
@@ -202,11 +202,6 @@ function goToLogin() {
 }
 </script>
 
-<a href = "logout.php">
-
-<button>
-    Logout
-</button>
 
 </a>
 </body>

@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+// 🔒 BLOCK ACCESS IF NOT LOGGED IN
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /SYSTEM/login-user.php");
+    exit();
+}
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,10 +112,40 @@
     .btn-danger:hover {
         background-color: #cc0000;
         color: white;
+    
+    
     }
+
+    .logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 2px solid #ff9900;
+    color: #ff9900;
+    padding: 8px 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #ff9900;
+    color: black;
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+}
+
+
+    
+
+
 </style>
 </head>
 <body>
+
+<a href="/SYSTEM/logout.php" class="logout-btn">Log-out</a>
+
 
 <div class="container-my5">
     <h2>List of Dishes</h2>
@@ -118,7 +163,7 @@
         </thead>
         <tbody>
             <?php 
-                session_start();
+                
 
                 $server = "localhost";
                 $user = "root";
@@ -157,12 +202,6 @@
     </table>
 </div>
 
-<div>
-    <a href = logout.php>
-        
-  <button> Logout </button>
-  </a>
-</div>
-g
+
 </body>
 </html>

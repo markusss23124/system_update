@@ -65,6 +65,7 @@ if (isset($_POST['clicked'])) {
     }
 
     .signup-container {
+        height: 668px;
         width: 380px;
         background-color: #1c1c1c;
         padding: 40px;
